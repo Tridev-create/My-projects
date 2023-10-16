@@ -5,9 +5,9 @@ def main():
     print(validate(input("IPv4 address: ")))
 
 
-def validate(ip):
+def validate(ips):
     regec = "([0-1]?([0-9]?){2}|2[0-4]?[0-9]?|25[0-5]?)"
-    match = search(r"^" + regec + "\." + regec + "\." + regec + "\." + regec + "$", ip)
+    match = search(r"^" + regec + "\." + regec + "\." + regec + "\." + regec + "$", ips)
     if match:
         return True
     else:
