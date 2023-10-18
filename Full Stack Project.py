@@ -167,18 +167,16 @@ def main():
                 Firebase_DB.append(i)
                 print(f'eeee {Firebase_DB[0:10]}')
                 if Firebase_DB[Count_DB]:  # Pose Name
-                    print(f'ekfjleiuiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiro{len(Data)}')
                     Reps, Sets = convert(Data, f'{Firebase_DB[Count_DB]}')
                     print(Reps, Sets)
                     Result = int(float(Reps)) * int(float(Sets))
-                    print(f'wefeoriooooooooooooooooooooooooooooooooooooooooooooo{len(Sets)}')
                     if int(float(Reps)) > 0 and int(float(Sets)) > 0:
                         # Convert Degree
                         Right_Down, Right_Up, Left_Down, Left_Up = convert_degree(Degree_Beginners[Firebase_DB[Count_DB]])
 
                         # Calculate the percent
                         if Firebase_DB[Count_DB] in Straight:
-                            print(f'FFFFFFFFFFFFFFFFF{Firebase_DB[Count_DB]}')
+                            print(f'{Firebase_DB[Count_DB]}')
                             percentage_Right, percentage_Left = Hand_Straight(img, Right_Down, Right_Up, Left_Down,
                                                                               Left_Up,
                                                                               Reps, Sets)
@@ -194,7 +192,6 @@ def main():
                                 time_Pose = 0
 
                         elif Firebase_DB[Count_DB] in Iso_Pose:
-                            print('Isoooooooooooooooo')
                             percentage_Right, percentage_Left = Iso(img, Right_Down, Right_Up, Left_Down, Left_Up,
                                                                     Reps, Sets)
 
