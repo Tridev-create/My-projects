@@ -118,10 +118,8 @@ def main():
     Height = db.reference(f'user/Login/Height').get()
 
     BMI = int(Weight) / ((int(float(Height))/100) * (int(float(Height)) / 100))
-    print(f'OverWeighttttttttttttttttttttttttttttttttttttttttt{BMI}')
 
     if BMI > 23:
-        print('OverWeighttttttttttttttttttttttttttttttttttttttttt')
         Over_Weight(User, week, re, count_week)
 
     Data = db.reference(f'{User}/Week {week}/Day 3/Exercise posture').get()
@@ -159,10 +157,6 @@ def main():
             week += 1"""
 
         if len(Position) != 0:
-            # sock.sendto(str.encode(str(int(percentage_Right))), serverAddressPort)
-
-            # Reps, Sets = convert(Data, 'HandStand')
-            # Result_Handstand = int(Reps) * int(Sets)
             for i in Data:
                 Firebase_DB.append(i)
                 print(f'eeee {Firebase_DB[0:10]}')
@@ -317,9 +311,6 @@ def Hand(img, Left_Down, Left_Up, Right_Down, Right_Up, Reps, Sets, countz=0, di
 
             return percentage_Right, percentage_Left
 
-            #print(f'Count: {countz}')
-            #print(f'Dir: {dirs}')
-            #print('percentage_Rightsssssssssssssssssssssssssssssssssssssssssssssssss')
 
 def Hand_Straight(img, Left_Down, Left_Up, Right_Down, Right_Up, Reps, Sets, countz=0, dirs=0):
     for _ in range(len(Reps)):
@@ -344,9 +335,6 @@ def Hand_Straight(img, Left_Down, Left_Up, Right_Down, Right_Up, Reps, Sets, cou
 
             return percentage_Right, percentage_Left
 
-            #print(f'Count: {countz}')
-            #print(f'Dir: {dirs}')
-            #print('percentage_Rightsssssssssssssssssssssssssssssssssssssssssssssssss')
 
 
 def Legs(img, Left_Down, Left_Up, Right_Down, Right_Up, Reps, Sets, countz=0, dirs=0):
